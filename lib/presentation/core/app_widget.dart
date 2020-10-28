@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ddd/application/auth/auth_bloc.dart';
 import 'package:ddd/injection.dart';
-import 'package:ddd/presentation/routes/router.gr.dart';
+import 'package:ddd/presentation/routes/router.gr.dart' as auto_route;
 
 class AppWidget extends StatelessWidget {
   // final Future<FirebaseApp> _initialization = Firebase.initializeApp();
@@ -43,7 +43,7 @@ class AppWidget extends StatelessWidget {
             ),
           ),
         ),
-        builder: ExtendedNavigator(router: Router()),
+        builder: ExtendedNavigator(router: auto_route.Router()),
       ),
     );
     // return FutureBuilder(
